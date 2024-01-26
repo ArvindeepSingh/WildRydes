@@ -16,19 +16,19 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ### Step 1: Create CodeCommit Repository
 
-1. Open the AWS CodeCommit console.
-2. Choose Create Repository.
-3. Enter `wildrydes-site` for the Repository name.
-4. Choose Create.
+- Open the AWS CodeCommit console.
+- Choose Create Repository.
+- Enter `wildrydes-site` for the Repository name.
+- Choose Create.
 
 ### Step 2: Set Up IAM User and Git Credentials
 
-1. Set up an IAM user with Git credentials following instructions in the [AWS CodeCommit User Guide](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html).
+- Set up an IAM user with Git credentials following instructions in the [AWS CodeCommit User Guide](https://docs.aws.amazon.com/codecommit/latest/userguide/setting-up-gc.html).
 
 ### Step 3: Configure AWS CLI
 
-1. If AWS CLI is not installed, install it using terminal commands specific to your OS.
-2. Enter `aws configure` in the terminal, providing Access Key ID, Secret Access Key, and Region.
+- If AWS CLI is not installed, install it using terminal commands specific to your OS.
+- Enter `aws configure` in the terminal, providing Access Key ID, Secret Access Key, and Region.
 
 ### Step 4: Set Up Git Config
 
@@ -37,29 +37,29 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ### Step 5: Clone CodeCommit Repository
 
-1. Navigate to the AWS CodeCommit console.
-2. Select the `wildrydes-site` repository.
-3. Select Clone HTTPS from the Clone URL dropdown to copy the HTTPS URL.
-4. Run `git clone` in the terminal using the copied URL.
+- Navigate to the AWS CodeCommit console.
+- Select the `wildrydes-site` repository.
+- Select Clone HTTPS from the Clone URL dropdown to copy the HTTPS URL.
+- Run `git clone` in the terminal using the copied URL.
 
 ### Step 6: Copy Website Content
 
-1. Change directory into your repository (`wildrydes-site`).
-2. Copy static files from S3 bucket:
+- Change directory into your repository (`wildrydes-site`).
+- Copy static files from S3 bucket:
     ```bash
     aws s3 cp s3://wildrydes-us-east-1/WebApplication/1_StaticWebHosting/website ./ --recursive
     ```
-3. Add, commit, and push git files.
+- Add, commit, and push git files.
 
 ### Step 7: Launch AWS Amplify Console
 
-1. Launch the AWS Amplify console. 
-2. Choose Get Started. 
-3. Under the Amplify Hosting Host your web app header, choose Get Started. 
-4. On the Get started with Amplify Hosting page, select AWS CodeCommit and choose Continue.
-5. On the Add repository branch step, select wildrydes-site from the Select a repository dropdown.
-6. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
-7. In the Branch dropdown select master and choose Next. 
+- Launch the AWS Amplify console. 
+- Choose Get Started. 
+- Under the Amplify Hosting Host your web app header, choose Get Started. 
+- On the Get started with Amplify Hosting page, select AWS CodeCommit and choose Continue.
+- On the Add repository branch step, select wildrydes-site from the Select a repository dropdown.
+- If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
+- In the Branch dropdown select master and choose Next. 
 
 ## Module 2
 In this module, you will integrate Amazon Cognito User Pools to manage user accounts on your WildRydes website. Users will register, confirm their email, and sign in to access the site. This README provides step-by-step instructions for the setup and usage of the authentication system.
