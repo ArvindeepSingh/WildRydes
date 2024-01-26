@@ -51,9 +51,7 @@ This web application can be deployed in any AWS Region supporting services like 
     ```
 3. Add, commit, and push git files.
 
-## Deploying with AWS Amplify
-
-### Step 1: Launch AWS Amplify Console
+### Step 7: Launch AWS Amplify Console
 
 1. Launch the AWS Amplify console. 
 2. Choose Get Started. 
@@ -62,3 +60,5 @@ This web application can be deployed in any AWS Region supporting services like 
 5. On the Add repository branch step, select wildrydes-site from the Select a repository dropdown.
 6. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
 7. In the Branch dropdown select master and choose Next. 
+
+
