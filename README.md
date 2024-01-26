@@ -1,6 +1,6 @@
 # Wild Rydes AWS Amplify Setup
 
-## Overview
+## Module 1
 
 This module guides you through configuring AWS Amplify to host the static resources for your web application with continuous deployment. The Amplify Console provides a git-based workflow, making deployment and hosting seamless. In subsequent modules, dynamic functionality will be added using JavaScript to call remote RESTful APIs built with AWS Lambda and Amazon API Gateway.
 
