@@ -1,6 +1,6 @@
 # Wild Rydes AWS Amplify Setup
 
-## Module 1
+## Module 1: Initial Setup and AWS Amplify Configuration
 
 This module guides you through configuring AWS Amplify to host the static resources for your web application with continuous deployment. The Amplify Console provides a git-based workflow, making deployment and hosting seamless. In subsequent modules, dynamic functionality will be added using JavaScript to call remote RESTful APIs built with AWS Lambda and Amazon API Gateway.
 
@@ -16,10 +16,10 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ### Step 1: Create CodeCommit Repository
 
-- Open the AWS CodeCommit console.
-- Choose Create Repository.
-- Enter `wildrydes-site` for the Repository name.
-- Choose Create.
+1. Open the AWS CodeCommit console.
+2. Choose Create Repository.
+3. Enter `wildrydes-site` for the Repository name.
+4. Choose Create.
 
 ### Step 2: Set Up IAM User and Git Credentials
 
@@ -61,14 +61,15 @@ This web application can be deployed in any AWS Region supporting services like 
 - If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
 - In the Branch dropdown select master and choose Next. 
 
-## Module 2
+## Module 2: User Registration and Sign-In
+
 In this module, you will integrate Amazon Cognito User Pools to manage user accounts on your WildRydes website. Users will register, confirm their email, and sign in to access the site. This README provides step-by-step instructions for the setup and usage of the authentication system.
 
-## Prerequisites
+### Prerequisites
 - AWS account with appropriate permissions.
 - Git installed on your local machine.
 
-## Setup Instructions
+### Setup Instructions
 
 1. **Clone the repository to your local machine:**
 
@@ -103,29 +104,24 @@ In this module, you will integrate Amazon Cognito User Pools to manage user acco
 7. **Testing:**
    - Open your deployed website and test user registration, confirmation, and sign-in.
 
-## Troubleshooting
+### Troubleshooting
 - Check the Cognito console for user details and confirmations.
 - Verify email delivery settings in the SES console.
 
-## Next Steps
+### Next Steps
 Proceed to Module 3 for integrating the Amazon Cognito user pool authorizer with the RESTful API using Amazon API Gateway.
 
-## Important Notes
-- This README assumes that you have successfully completed Module 1.
-- Follow each step carefully to avoid issues with user registration and confirmation.
-- For real deployments, configure Amazon SES for sending emails from your own domain.
+## Module 3: API Gateway Integration
 
-# WildRydes Website - Module 3: API Gateway Integration
-
-## Overview
+### Overview
 In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon DynamoDB to create a RESTful API for your web application. The API will enable the frontend application to communicate with the backend Lambda function, allowing users to request unicorns. The Lambda function processes these requests, records them in DynamoDB, and responds with details about the dispatched unicorn.
 
-## Prerequisites
+### Prerequisites
 - Completed Module 2: Amazon Cognito User Pool Integration.
 - AWS account with appropriate permissions.
 - Git installed on your local machine.
 
-## Setup Instructions
+### Setup Instructions
 
 1. **Clone the repository to your local machine:**
 
@@ -156,7 +152,7 @@ In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon
 6. **Next Steps:**
    Proceed to Module 4 for securing your API using Amazon Cognito User Pool Authorizer.
 
-## Module 3 - API Gateway Integration
+### Module 3 - API Gateway Integration
 
 1. **Create API Gateway:**
    - Use the Amazon API Gateway console to create a new API.
@@ -178,23 +174,24 @@ In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon
 6. **Troubleshooting:**
    - Check API Gateway logs for any issues during integration.
 
-## Important Notes
+### Important Notes
 - This README assumes that you have successfully completed Module 2.
 - Follow each step carefully to ensure proper API Gateway integration.
 - Ensure the Lambda function and DynamoDB table are correctly configured.
 - Test the API thoroughly before moving to the next module.
 
 **End of Module 3 README**
+
 # WildRydes Website - Module 4: API Security with Cognito User Pool Authorizer
 
 ## Overview
 In this module, you will enhance the security of your RESTful API by adding an Amazon Cognito User Pool Authorizer. This authorizer will validate and authorize API requests using JSON web tokens (JWT) issued by the Cognito User Pool. By implementing this authorizer, you ensure that only authenticated and authorized users can access the API.
 
-## Prerequisites
+### Prerequisites
 - Completed Module 3: API Gateway Integration.
 - Configured Amazon API Gateway with a deployed stage.
 
-## Setup Instructions
+### Setup Instructions
 
 1. **Clone the repository to your local machine:**
 
@@ -225,7 +222,7 @@ In this module, you will enhance the security of your RESTful API by adding an A
 6. **Next Steps:**
    Proceed to Module 5 for building the final part of your web application.
 
-## Module 4 - API Security with Cognito User Pool Authorizer
+### Module 4 - API Security with Cognito User Pool Authorizer
 
 1. **Create Cognito User Pool Authorizer:**
    - Use the Amazon API Gateway console to create a new Cognito User Pool Authorizer.
@@ -242,10 +239,67 @@ In this module, you will enhance the security of your RESTful API by adding an A
 4. **Deployment:**
    - Deploy the updated API to the existing stage.
 
-## Important Notes
+### Important Notes
 - This README assumes that you have successfully completed Module 3.
 - Follow each step carefully to ensure proper API security configuration.
 - Test the API thoroughly to confirm that only authenticated users can access the `/ride` endpoint.
 
 **End of Module 4 README**
 
+# WildRydes Website - Module 5: Resource Cleanup
+
+## Overview
+In this final module, you will learn how to properly clean up and delete the resources created throughout the tutorial. It is essential to delete unused resources to avoid incurring unnecessary charges.
+
+## Resource Cleanup Steps
+
+### 1. Delete AWS Amplify App:
+   - In the AWS Amplify console, select the "wildrydes-site" app created in Module 1.
+   - Choose "Actions" and select "Delete app."
+   - Confirm the deletion by entering "delete" and choose "Delete."
+
+### 2. Delete Amazon Cognito User Pool:
+   - In the Amazon Cognito console, select your WildRydes User Pool.
+   - Choose "Delete user pool."
+   - Select the checkbox to deactivate deletion protection, enter "WildRydes" to confirm, and choose "Delete."
+
+### 3. Delete AWS Lambda Function:
+   - In the AWS Lambda console, navigate to the "Functions" page.
+   - Select the "RequestUnicorn" function created in Module 3.
+   - From the "Actions" drop-down, choose "Delete function."
+
+### 4. Delete IAM Role:
+   - In the IAM console, select "Roles" from the left navigation pane.
+   - Enter "WildRydesLambda" into the filter box.
+   - Select the checkbox next to the role, "WildRydesLambda," and choose "Delete."
+   - Confirm deletion by entering "WildRydesLambda" and choose "Delete."
+
+### 5. Delete DynamoDB Table:
+   - In the Amazon DynamoDB console, select "Tables" from the left navigation pane.
+   - Select the checkbox next to the "Rides" table created in Module 3.
+   - Choose "Delete."
+   - Select the checkbox next to "Delete all CloudWatch alarms for Rides," enter "confirm," and choose "Delete."
+
+### 6. Delete REST API:
+   - In the Amazon API Gateway console, select the "WildRydes" API created in Module 4.
+   - In the "Actions" dropdown, choose "Delete."
+   - Confirm deletion by choosing "Delete" on the confirmation screen.
+
+### 7. Delete CloudWatch Logs:
+   - In the Amazon CloudWatch console, expand "Logs" in the left navigation pane and select "Log groups."
+   - Select the checkbox next to the "/aws/lambda/RequestUnicorn" log group.
+   - Choose "Delete log group(s)" from the "Actions" dropdown.
+   - Confirm deletion.
+
+### 8. Repeat Cleanup for CloudFormation Stacks (if applicable):
+   - If you launched any CloudFormation stacks, repeat steps 2-7 for any log groups associated with custom resources in those stacks.
+
+### 9. Final Confirmation:
+   - Double-check that all resources have been successfully deleted by verifying their absence in their respective AWS service consoles.
+
+## Important Notes
+- Ensure you follow these cleanup steps to avoid incurring additional charges.
+- Confirm the deletion of each resource to prevent any unintended consequences.
+- Take note of any CloudFormation stacks or additional resources launched during the tutorial and ensure their cleanup.
+
+**End of Module 5 README**
