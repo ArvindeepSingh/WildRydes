@@ -185,4 +185,67 @@ In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon
 - Test the API thoroughly before moving to the next module.
 
 **End of Module 3 README**
+# WildRydes Website - Module 4: API Security with Cognito User Pool Authorizer
+
+## Overview
+In this module, you will enhance the security of your RESTful API by adding an Amazon Cognito User Pool Authorizer. This authorizer will validate and authorize API requests using JSON web tokens (JWT) issued by the Cognito User Pool. By implementing this authorizer, you ensure that only authenticated and authorized users can access the API.
+
+## Prerequisites
+- Completed Module 3: API Gateway Integration.
+- Configured Amazon API Gateway with a deployed stage.
+
+## Setup Instructions
+
+1. **Clone the repository to your local machine:**
+
+    ```bash
+    $ git clone <repository-url>
+    $ cd wildryde-site
+    ```
+
+2. **Module 4: API Security with Cognito User Pool Authorizer**
+   - Follow the steps outlined in the "Module 4 - API Security with Cognito User Pool Authorizer" section.
+
+3. **Testing:**
+   - Test the secured API by making requests with valid and invalid tokens.
+
+4. **Deployment:**
+   - Commit and push the changes to your Git repository.
+
+    ```bash
+    $ git add .
+    $ git commit -m "module_4_changes"
+    $ git push
+    ```
+
+5. **Notes:**
+   - Ensure the Cognito User Pool Authorizer is correctly configured.
+   - Verify API Gateway settings for the Authorizer.
+
+6. **Next Steps:**
+   Proceed to Module 5 for building the final part of your web application.
+
+## Module 4 - API Security with Cognito User Pool Authorizer
+
+1. **Create Cognito User Pool Authorizer:**
+   - Use the Amazon API Gateway console to create a new Cognito User Pool Authorizer.
+   - Configure the authorizer to use the Cognito User Pool created in Module 2.
+
+2. **Configure API Gateway:**
+   - Update the API Gateway settings to include the Cognito User Pool Authorizer.
+   - Ensure that only authenticated users can access the `/ride` endpoint.
+
+3. **Test Authorization:**
+   - Test the API by making requests with valid and invalid authorization tokens.
+   - Ensure that unauthorized users are denied access.
+
+4. **Deployment:**
+   - Deploy the updated API to the existing stage.
+
+## Important Notes
+- This README assumes that you have successfully completed Module 3.
+- Follow each step carefully to ensure proper API security configuration.
+- Test the API thoroughly to confirm that only authenticated users can access the `/ride` endpoint.
+
+**End of Module 4 README**
 
