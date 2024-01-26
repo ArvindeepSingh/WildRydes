@@ -182,7 +182,7 @@ In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon
 
 **End of Module 3 README**
 
-# WildRydes Website - Module 4: API Security with Cognito User Pool Authorizer
+## Module 4: API Security with Cognito User Pool Authorizer
 
 ## Overview
 In this module, you will enhance the security of your RESTful API by adding an Amazon Cognito User Pool Authorizer. This authorizer will validate and authorize API requests using JSON web tokens (JWT) issued by the Cognito User Pool. By implementing this authorizer, you ensure that only authenticated and authorized users can access the API.
@@ -246,7 +246,7 @@ In this module, you will enhance the security of your RESTful API by adding an A
 
 **End of Module 4 README**
 
-# WildRydes Website - Module 5: Resource Cleanup
+## Module 5: Resource Cleanup
 
 ## Overview
 In this final module, you will learn how to properly clean up and delete the resources created throughout the tutorial. It is essential to delete unused resources to avoid incurring unnecessary charges.
