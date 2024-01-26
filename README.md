@@ -55,5 +55,10 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ### Step 1: Launch AWS Amplify Console
 
-1. Launch the [AWS Amplify console](https://console.aws.amazon.com/amplify/).
-2. Under Amplify Hosting, choose Get Started.
+1. Launch the AWS Amplify console. 
+2. Choose Get Started. 
+3. Under the Amplify Hosting Host your web app header, choose Get Started. 
+4. On the Get started with Amplify Hosting page, select AWS CodeCommit and choose Continue.
+5. On the Add repository branch step, select wildrydes-site from the Select a repository dropdown.
+6. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
+7. In the Branch dropdown select master and choose Next. 
