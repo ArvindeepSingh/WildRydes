@@ -53,8 +53,7 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ## Deploying with AWS Amplify
 
-### Step 7: Launch AWS Amplify Console
+### Step 1: Launch AWS Amplify Console
 
 1. Launch the [AWS Amplify console](https://console.aws.amazon.com/amplify/).
-2. Choose Get Started.
-3. Under Amplify Hosting, choose Get Started.
+2. Under Amplify Hosting, choose Get Started.
