@@ -61,4 +61,60 @@ This web application can be deployed in any AWS Region supporting services like 
 6. If you used GitHub, you'll need to authorize AWS Amplify to your GitHub account.
 7. In the Branch dropdown select master and choose Next. 
 
+# Module 2: Amazon Cognito User Pool Integration
+
+## Overview
+In this module, you will integrate Amazon Cognito User Pools to manage user accounts on your WildRydes website. Users will register, confirm their email, and sign in to access the site. This README provides step-by-step instructions for the setup and usage of the authentication system.
+
+## Prerequisites
+- AWS account with appropriate permissions.
+- Git installed on your local machine.
+
+## Setup Instructions
+
+1. **Clone the repository to your local machine:**
+
+    ```bash
+    $ git clone <repository-url>
+    $ cd wildryde-site
+    ```
+
+2. **Module 1: Initial Setup**
+   - Follow the steps outlined in the "Module 1 - Initial Setup" section.
+
+3. **Module 2: User Registration and Sign-In**
+   - Perform the steps mentioned in the "Module 2 - User Registration and Sign-In" section.
+
+4. **API Configuration:**
+   - Save the authentication token generated after successful sign-in.
+
+5. **Notes:**
+   - Ensure email verification for real email addresses.
+   - Verify SES settings for email delivery.
+   - Update Cognito details in `config.js`.
+
+6. **Deployment:**
+   - Commit and push the changes to your Git repository.
+
+    ```bash
+    $ git add .
+    $ git commit -m "module_2_changes"
+    $ git push
+    ```
+
+7. **Testing:**
+   - Open your deployed website and test user registration, confirmation, and sign-in.
+
+## Troubleshooting
+- Check the Cognito console for user details and confirmations.
+- Verify email delivery settings in the SES console.
+
+## Next Steps
+Proceed to Module 3 for integrating the Amazon Cognito user pool authorizer with the RESTful API using Amazon API Gateway.
+
+## Important Notes
+- This README assumes that you have successfully completed Module 1.
+- Follow each step carefully to avoid issues with user registration and confirmation.
+- For real deployments, configure Amazon SES for sending emails from your own domain.
+
 
