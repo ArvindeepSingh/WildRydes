@@ -185,7 +185,7 @@ In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon
 
 ## Module 4: API Security with Cognito User Pool Authorizer
 
-## Overview
+### Overview
 In this module, you will enhance the security of your RESTful API by adding an Amazon Cognito User Pool Authorizer. This authorizer will validate and authorize API requests using JSON web tokens (JWT) issued by the Cognito User Pool. By implementing this authorizer, you ensure that only authenticated and authorized users can access the API.
 
 ### Prerequisites
@@ -249,7 +249,7 @@ In this module, you will enhance the security of your RESTful API by adding an A
 
 ## Module 5: Resource Cleanup
 
-## Overview
+### Overview
 In this final module, you will learn how to properly clean up and delete the resources created throughout the tutorial. It is essential to delete unused resources to avoid incurring unnecessary charges.
 
 ## Resource Cleanup Steps
