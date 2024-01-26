@@ -115,4 +115,74 @@ Proceed to Module 3 for integrating the Amazon Cognito user pool authorizer with
 - Follow each step carefully to avoid issues with user registration and confirmation.
 - For real deployments, configure Amazon SES for sending emails from your own domain.
 
+# WildRydes Website - Module 3: API Gateway Integration
+
+## Overview
+In this module, you will integrate Amazon API Gateway with AWS Lambda and Amazon DynamoDB to create a RESTful API for your web application. The API will enable the frontend application to communicate with the backend Lambda function, allowing users to request unicorns. The Lambda function processes these requests, records them in DynamoDB, and responds with details about the dispatched unicorn.
+
+## Prerequisites
+- Completed Module 2: Amazon Cognito User Pool Integration.
+- AWS account with appropriate permissions.
+- Git installed on your local machine.
+
+## Setup Instructions
+
+1. **Clone the repository to your local machine:**
+
+    ```bash
+    $ git clone <repository-url>
+    $ cd wildryde-site
+    ```
+
+2. **Module 3: API Gateway Integration**
+   - Follow the steps outlined in the "Module 3 - API Gateway Integration" section.
+
+3. **Testing:**
+   - Test the integration by making requests to the API Gateway endpoint.
+
+4. **Deployment:**
+   - Commit and push the changes to your Git repository.
+
+    ```bash
+    $ git add .
+    $ git commit -m "module_3_changes"
+    $ git push
+    ```
+
+5. **Notes:**
+   - Ensure all IAM roles and permissions are correctly configured.
+   - Verify API Gateway settings for integration with Lambda.
+
+6. **Next Steps:**
+   Proceed to Module 4 for securing your API using Amazon Cognito User Pool Authorizer.
+
+## Module 3 - API Gateway Integration
+
+1. **Create API Gateway:**
+   - Use the Amazon API Gateway console to create a new API.
+   - Configure the API to use a RESTful structure.
+
+2. **Create Resource and Method:**
+   - Add a resource and create a POST method for the `/ride` endpoint.
+   - Configure the method to invoke the `RequestUnicorn` Lambda function.
+
+3. **Deploy API:**
+   - Deploy the API to a stage.
+
+4. **Test Integration:**
+   - Test the integration by making a POST request to the `/ride` endpoint using the provided test event.
+
+5. **Update Frontend:**
+   - Update the frontend application to use the API Gateway endpoint for requesting unicorns.
+
+6. **Troubleshooting:**
+   - Check API Gateway logs for any issues during integration.
+
+## Important Notes
+- This README assumes that you have successfully completed Module 2.
+- Follow each step carefully to ensure proper API Gateway integration.
+- Ensure the Lambda function and DynamoDB table are correctly configured.
+- Test the API thoroughly before moving to the next module.
+
+**End of Module 3 README**
 
