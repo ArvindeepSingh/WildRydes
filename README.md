@@ -63,6 +63,7 @@ This web application can be deployed in any AWS Region supporting services like 
 
 ## Module 2: User Registration and Sign-In
 
+### Overview
 In this module, you will integrate Amazon Cognito User Pools to manage user accounts on your WildRydes website. Users will register, confirm their email, and sign in to access the site. This README provides step-by-step instructions for the setup and usage of the authentication system.
 
 ### Prerequisites
